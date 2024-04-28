@@ -37,6 +37,13 @@
     const ul = document.querySelector("ul");
     const inputField = document.querySelector("input");
     const submitBtn = document.querySelector("button");
+
+    //Function declartation
+    function onSubmitClick() {
+      alert('Button was clicked');
+    }
+
+    submitBtn.addEventListener("click", () => onSubmitClick());
   </script>
 </body>
 
