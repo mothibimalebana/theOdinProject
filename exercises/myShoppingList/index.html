@@ -40,7 +40,8 @@
 
     //Function declartation
     function onSubmitClick() {
-      alert('Button was clicked');
+      const currentValue = inputField.value;
+      alert(`${currentValue}`);
     }
 
     submitBtn.addEventListener("click", () => onSubmitClick());
