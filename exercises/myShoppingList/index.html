@@ -41,12 +41,12 @@
     //Function declartation
     function onSubmitClick() {
       const currentValue = inputField.value;
-      alert(`${currentValue}`);
       inputField.value = '';
 
       const li = document.createElement("li");
       const span = document.createElement("span");
       const button = document.createElement("button");
+      button.addEventListener("click", () => li.remove());
 
       li.appendChild(span);
       li.appendChild(button);
@@ -54,9 +54,12 @@
       span.textContent = `${currentValue}`;
       button.textContent = 'Delete';
       ul.appendChild(li);
+      inputField.focus();
     }
 
+
     submitBtn.addEventListener("click", () => onSubmitClick());
+
   </script>
 </body>
 
