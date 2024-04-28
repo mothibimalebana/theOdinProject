@@ -42,6 +42,7 @@
     function onSubmitClick() {
       const currentValue = inputField.value;
       alert(`${currentValue}`);
+      inputField.value = '';
     }
 
     submitBtn.addEventListener("click", () => onSubmitClick());
