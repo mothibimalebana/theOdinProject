@@ -43,6 +43,17 @@
       const currentValue = inputField.value;
       alert(`${currentValue}`);
       inputField.value = '';
+
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      const button = document.createElement("button");
+
+      li.appendChild(span);
+      li.appendChild(button);
+
+      span.textContent = `${currentValue}`;
+      button.textContent = 'Delete';
+      ul.appendChild(li);
     }
 
     submitBtn.addEventListener("click", () => onSubmitClick());
