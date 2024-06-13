@@ -12,3 +12,13 @@ user.name = "Pete"
 delete user.name;
 
 //Check for emptiness
+function isEmpty(obj){
+	for(let property in obj){
+		if(property === undefined){
+			return true
+		}
+		else {
+			return false
+		}
+	}
+}
