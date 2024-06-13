@@ -6,3 +6,5 @@ user.name = "John";
 user.surname = "Smith";
 //Change value of name to Pete
 user.name = "Pete"
+//Remove name property from the object
+delete user.name;
