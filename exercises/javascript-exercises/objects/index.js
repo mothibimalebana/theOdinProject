@@ -4,3 +4,5 @@ let user = {};
 user.name = "John";
 //Add the property surname with value Smith
 user.surname = "Smith";
+//Change value of name to Pete
+user.name = "Pete"
