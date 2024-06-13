@@ -14,11 +14,29 @@ delete user.name;
 //Check for emptiness
 function isEmpty(obj){
 	for(let property in obj){
-		if(property === undefined){
 			return true
 		}
-		else {
 			return false
-		}
-	}
 }
+
+//Sum object properties
+//Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+
+//variables
+let sumOfSalaries = 0;
+
+//objects
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+};
+
+//functions
+function sumSalaries(obj){
+	for(let salary in obj){
+		sumOfSalaries += obj[salary]; 
+	}
+	return sumOfSalaries
+}
+console.log(sumSalaries(salaries))
