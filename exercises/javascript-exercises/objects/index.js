@@ -1,3 +1,5 @@
+//Hello, object
+
 //Create an empty user
 let user = {};
 //Add property name with value John
@@ -8,3 +10,5 @@ user.surname = "Smith";
 user.name = "Pete"
 //Remove name property from the object
 delete user.name;
+
+//Check for emptiness
