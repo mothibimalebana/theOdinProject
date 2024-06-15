@@ -59,9 +59,9 @@
 
 		// 7. sort Exercise
 		// Sort the people alphabetically by last name
-		let inventorsLastName = inventors.map((inventors) => inventors.last);
-		let inventorsLastAlph = inventorsLastName.sort();
-		console.log(inventorsLastAlph);
+		let FullName = people.map((people) => people.split(', '));
+		let lastName = FullName.map((FullName) => FullName[0]);
+		console.log(lastName)
 
 		// 8. Reduce Exercise
 		// Sum up the instances of each of these
