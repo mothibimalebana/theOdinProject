@@ -51,7 +51,8 @@ numAdd.addEventListener("click", () => operatorClicked('+'))
 numSubtract.addEventListener("click", () => operatorClicked('-'))
 numDivide.addEventListener("click", () => operatorClicked('/'))
 nox.addEventListener("click", () => operatorClicked('x'))
-numEquals.addEventListener("click", () => displayResult(num2))
+// numEquals.addEventListener("click", () => displayResult(num2))
+numEquals.addEventListener("click", () => displayResult())
 
 function displayRegEx(num){
 	if(numberArray.includes(num)) {
@@ -60,8 +61,12 @@ function displayRegEx(num){
 	else{
 	}
 }
-function displayResult(answer){
-	inputScreen.textContent = num2
+// function displayResult(answer){
+function displayResult(){
+	// inputScreen.textContent = num2
+	getNum2();
+	operate(op, num1, num2);
+	clearAfterResult();
 }
 
 function clearScreen(){
@@ -69,6 +74,23 @@ function clearScreen(){
 }
 function getNum1(){
 	num1 = Number(inputScreen.textContent);
+}
+
+// New Function
+function getNum2() {
+	num2 = Number(inputScreen.textContent);
+}
+  
+// New Function
+function setOperator(operator) {
+	op = operator;
+}
+  
+// New Function
+function clearAfterResult() {
+	num1 = " ";
+	num2 = " ";
+	op = " ";
 }
 
 //arithmetic functions
@@ -108,13 +130,14 @@ function operate(op, num1, num2){
 		default:
 			alert("invalid operator");
 	}
-	return result
+	inputScreen.textContent = result;
+	// return result
 
 }
 
-function operatorClicked(op){
+function operatorClicked(operator){
 	getNum1();
+	setOperator(operator);
 	clearScreen();
-	num2 = operate(op, num1, Number(inputScreen.textContent));
-	
+	// num2 = operate(op, num1, Number(inputScreen.textContent));
 }
