@@ -8,6 +8,7 @@ let inputScreen = document.querySelector(".inputScreen");
 /*Keyboard*/
 //first row
 let C = document.querySelector("#C");
+C.addEventListener("click", () => clear());
 let M = document.querySelector("#M");
 let numPerc = document.querySelector('#numPerc');
 let numDivide = document.querySelector('#numDivide');
@@ -50,44 +51,24 @@ numAdd.addEventListener("click", () => operatorClicked('+'))
 numSubtract.addEventListener("click", () => operatorClicked('-'))
 numDivide.addEventListener("click", () => operatorClicked('/'))
 nox.addEventListener("click", () => operatorClicked('x'))
-numEquals.addEventListener("click", () => displayResult())
+numEquals.addEventListener("click", () => displayResult(num2))
 
 function displayRegEx(num){
-	clearScreen();
 	if(numberArray.includes(num)) {
 	inputScreen.textContent += num
 	}
 	else{
 	}
 }
+function displayResult(answer){
+	inputScreen.textContent = num2
+}
+
 function clearScreen(){
 	inputScreen.textContent = " ";
 }
 function getNum1(){
 	num1 = Number(inputScreen.textContent);
-}
-function getNum2(op){
-	if(result === undefined){
-		switch(op){
-			case '+':
-				num2 = 0;
-				break;
-			case '-':
-				num2 = 0;
-				break;
-			case 'x':
-				num2 = 1;
-				break;
-			case '/':
-				num2 = 1;
-				break;
-			default:
-				alert("invalid operator");
-		}
-	}
-	else{
-		num2 = result;
-	}
 }
 
 //arithmetic functions
@@ -105,12 +86,9 @@ function divide(num1, num2){
 }
 function clear(){
 	inputScreen.textContent = ' ';
-	num1 = 0;
-	num2 = 0;
-	result = 0;
-}
-function displayResult(){
-	inputScreen.textContent = Result;
+	num1 = ' ';
+	num2 = ' ';
+	result = ' ';
 }
 //operate function
 function operate(op, num1, num2){
@@ -136,7 +114,7 @@ function operate(op, num1, num2){
 
 function operatorClicked(op){
 	getNum1();
-	getNum2(op);
-	Result = operate(op, num1, num2);
-	displayResult();
+	clearScreen();
+	num2 = operate(op, num1, Number(inputScreen.textContent));
+	
 }
