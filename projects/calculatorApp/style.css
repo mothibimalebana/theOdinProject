@@ -1,0 +1,171 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+
+	color: #333333;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calculator {
+	height: 1750px;
+	width: 1000px;
+
+	font-size: 100px;
+	font-weight: 500;
+	font-family: "Roboto";
+	font-style: normal;
+	line-height: normal;
+}
+
+.calcScreen {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: end;
+	height: 500px;
+	width: 1000px;
+
+	background-color: #5C79D9;
+}
+
+.calcScreen .inputScreen {
+	display: flex;
+	justify-content: end;
+	align-items: end;
+	color: white;
+
+	padding: 30px;
+}
+
+.calcButtons {
+	min-height: 1250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.calcButtons button {
+	width: 250px;
+	height: 250px;
+	border-style: none;
+	background-color: white;
+
+	font-size: 100px;
+	font-weight: 500;
+	font-family: "Roboto";
+	font-style: normal;
+	line-height: normal;
+}
+
+.calcButtons button:focus {
+	border-style: solid;
+}
+
+
+.firstRow {
+	min-width: 1000px;
+
+	background-color: #E2E9FF;
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+.firstRow button {
+	background-color: #E2E9FF;
+}
+
+.firstRow div {
+	min-height: 250px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 250px;
+}
+
+.secondRow {
+	min-width: 1000px;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+.secondRow div {
+	min-height: 250px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 250px;
+}
+
+.thirdRow {
+	min-width: 1000px;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+.thirdRow div {
+	min-height: 250px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 250px;
+}
+
+.fourthRow {
+	min-width: 1000px;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+.fourthRow div {
+	min-height: 250px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 250px;
+}
+
+.fifthRow {
+	min-width: 1000px;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+.fifthRow div {
+	min-height: 250px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 250px;
+}
