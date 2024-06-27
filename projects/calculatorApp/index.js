@@ -1,5 +1,6 @@
 //Variables
-let previousScreenV, currentScreenValue;
+let currentScreenValue = '';
+let previousScreenV = '';
 let numbers = document.querySelectorAll(".numbers");
 let operators = document.querySelectorAll(".operators");
 let inputScreen = document.querySelector(".inputScreen");
@@ -47,5 +48,6 @@ numbers.forEach((numbers) => {
 	numbers.addEventListener("click", () => displayNumbers(numbers.textContent))
 })
 function displayNumbers(num){
-	inputScreen.textContent += num
+	currentScreenValue += num;
+	inputScreen.textContent = currentScreenValue;
 }
