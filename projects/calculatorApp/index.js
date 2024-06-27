@@ -1,12 +1,27 @@
 //Variables
 let currentValue = '';
 let previousValue = '';
+let op = '';
+
+document.addEventListener("DOMContentLoaded", () => {
+//variables
 let numbers = document.querySelectorAll(".numbers");
 let operators = document.querySelectorAll(".operators");
 let inputScreen = document.querySelector(".inputScreen");
 let C = document.querySelector("#C");
 let eqauls = document.querySelector("#numEqauls");
 let comma = document.querySelector("#decimal");
+
+//Display Screen
+numbers.forEach((numbers) => {
+	numbers.addEventListener("click", () => displayNumbers(numbers.textContent))
+});
+operators.forEach((operators) => {
+	operators.addEventListener('click', () => operatorClicked(operators.textContent))
+});
+C.addEventListener('click', () => clearScreen());
+})
+
 
 //Operator Functions
 function add(num1, num2){
@@ -51,17 +66,11 @@ function displayNumbers(num){
 function clearScreen(){
 	inputScreen.textContent = ''
 }
-function operatorClicked(op){
-	previousValue = currentValue;
-	currentValue = '';
-	clearScreen();
+function operatorClicked(operator){
+	op = operator;
+	previousValue = Number(currentValue);
+
+	operate(op, previousValue, Number(currentValue));
+	console.log("previousValue: " + previousValue, "currentValue: " + currentValue, "op: " + op);
 }
 
-//Display Screen
-numbers.forEach((numbers) => {
-	numbers.addEventListener("click", () => displayNumbers(numbers.textContent))
-});
-operators.forEach((operators) => {
-	operators.addEventListener('click', operatorClicked(operators.textContent))
-});
-C.addEventListener('click', () => clearScreen());
