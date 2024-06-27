@@ -51,10 +51,17 @@ function displayNumbers(num){
 function clearScreen(){
 	inputScreen.textContent = ''
 }
+function operatorClicked(op){
+	previousValue = currentValue;
+	currentValue = '';
+	clearScreen();
+}
+
 //Display Screen
 numbers.forEach((numbers) => {
 	numbers.addEventListener("click", () => displayNumbers(numbers.textContent))
-})
+});
 operators.forEach((operators) => {
 	operators.addEventListener('click', operatorClicked(operators.textContent))
-})
+});
+C.addEventListener('click', () => clearScreen());
