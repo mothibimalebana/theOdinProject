@@ -3,23 +3,36 @@ let currentValue = '';
 let previousValue = '';
 let op = '';
 
-document.addEventListener("DOMContentLoaded", () => {
-//variables
-let numbers = document.querySelectorAll(".numbers");
-let operators = document.querySelectorAll(".operators");
 let inputScreen = document.querySelector(".inputScreen");
-let C = document.querySelector("#C");
 let eqauls = document.querySelector("#numEqauls");
 let comma = document.querySelector("#decimal");
+
+document.addEventListener("DOMContentLoaded", () => {
+let numbers = document.querySelectorAll(".numbers");
+let operators = document.querySelectorAll(".operators");
+let C = document.querySelector("#C");
 
 //Display Screen
 numbers.forEach((numbers) => {
 	numbers.addEventListener("click", () => displayNumbers(numbers.textContent))
 });
+
+comma.addEventListener("click", () => displayNumbers(comma.textContent))
+
 operators.forEach((operators) => {
-	operators.addEventListener('click', () => operatorClicked(operators.textContent))
+	operators.addEventListener('click', () =>  {
+		operatorClicked(operators.textContent);
+		num2 = operate(op, previousValue, Number(currentValue));
+		currentValue = num2;	
+	});
+})
+
+C.addEventListener('click', () => {
+	clearScreen();
+	currentValue = '';
+	previousValue = '';
+	op = '';
 });
-C.addEventListener('click', () => clearScreen());
 })
 
 
@@ -41,19 +54,15 @@ function operate(op, num1, num2){
 	switch(op){
 		case '+':
 			add(num1, num2);
-			console.log(num1, num2, add(num1, num2));
 			break;
 		case '-':
 			subtract(num1, num2);
-			console.log(num1, num2, subtract(num1, num2));
 			break;
 		case '*':
 			multipy(num1, num2);
-			console.log(num1, num2, multipy(num1, num2));
 			break;
 		case '/':
 			divide(num1, num2);
-			console.log(num1, num2, divide(num1, num2));
 			break;
 	}
 }
@@ -69,8 +78,6 @@ function clearScreen(){
 function operatorClicked(operator){
 	op = operator;
 	previousValue = Number(currentValue);
-
-	operate(op, previousValue, Number(currentValue));
-	console.log("previousValue: " + previousValue, "currentValue: " + currentValue, "op: " + op);
+	currentValue = ''
 }
 
