@@ -1,6 +1,7 @@
 let currValue = '';
 let prevValue = '';
 let op = '';
+let result;
 
 document.addEventListener("DOMContentLoaded", () => {
 	let C = document.querySelector("#C");
@@ -29,11 +30,30 @@ document.addEventListener("DOMContentLoaded", () => {
 		operators.addEventListener("click", () => {
 			handleOperators(operators.textContent)
 			inputScreen.textContent = currValue;
+			operate(prevValue, currValue);
 		})
 	})
 })
 
 //functions
+//mathematical operations
+function add(num1, num2){
+	return num1 + num2
+}
+function subtract(num1, num2){
+	return num1 - num2
+}
+function multiply(num1, num2){
+	return num1 * num2
+}
+function divide(num1, num2){
+	if (num2 === 0){
+		alert("division by zero is not possible");
+	}
+	else{
+		return num1 / num2
+	}
+}
 function handleNumbers(num){
 	if(currValue.length <= 7){
 	currValue += num;
@@ -44,7 +64,22 @@ function handleOperators(operator){
 	prevValue = currValue;
 	currValue = '';
 }
-function operate(num1, num2){
-	currValue = Number(currValue);
-	prevValue = Number(prevValue);
+function operate(op, num1, num2){
+	switch(op){
+		case '+':
+			result = add(num1, num2);
+			break;
+		case '-':
+			result = subtract(num1, num2);
+			break;
+		case '*':
+			result = multiply(num1, num2);
+			break;
+		case '/':
+			result = divide(num1, num2);
+			break;
+		default:
+			alert("invalid operator");
+	}
+	return result;
 }
