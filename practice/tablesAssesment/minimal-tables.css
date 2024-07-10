@@ -15,6 +15,7 @@ td, th {
 }
 
 th {
+  width: 75px;
   background-color: rgb(235,235,235);
 }
 
