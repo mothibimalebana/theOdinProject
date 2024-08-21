@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'quicksandlight';
   src: url('../fonts/font-webkit/quicksand-light-webfont.woff2') format('woff2'),
-       url('quicksand-light-webfont.woff') format('woff');
+       url('../fonts/font-webkit/quicksand-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
