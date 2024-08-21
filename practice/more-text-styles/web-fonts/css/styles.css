@@ -1,6 +1,6 @@
 /* General setup */
 @font-face {
-  font-family: 'quicksandlight';
+  font-family: 'quicksand';
   src: url('../fonts/font-webkit/quicksand-light-webfont.woff2') format('woff2'),
        url('../fonts/font-webkit/quicksand-light-webfont.woff') format('woff');
   font-weight: normal;
@@ -9,9 +9,9 @@
 }
 
 @font-face {
-  font-family: 'rubikmedium';
-  src: url('rubik-medium-webfont.woff2') format('woff2'),
-       url('rubik-medium-webfont.woff') format('woff');
+  font-family: 'rubik';
+  src: url('../fonts/font-webkit/rubik-medium-webfont.woff2') format('woff2'),
+       url('../fonts/font-webkit/rubik-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
