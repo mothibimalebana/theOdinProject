@@ -16,7 +16,7 @@
   4. Improve text rendering
 */
 body {
-    min-height: 100vh;
+    height: 100%;
     font-family: 'poppins-regular';
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -49,8 +49,75 @@ p, h1, h2, h3, h4, h5, h6 {
 li {
     list-style: none;
 }
+/**Fontface**/
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('../fonts/font/Poppins-Webfont/poppins-regular-webfont.woff2') format('woff2'),
+         url('../fonts//font/Poppins-Webfont/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-:root {
-    font-size: 16px;
 }
 
+
+
+
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('../foonts/font/Poppins-Webfont/poppins-medium-webfont.woff2') format('woff2'),
+         url('../fonts/font/Poppins-Webfont/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../fonts/font/Poppins-Webfont/poppins-bold-webfont.woff2') format('woff2'),
+         url('../fonts/font/Poppins-Webfont/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+        /**Font face**/
+
+
+
+:root {
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'poppins-regular';
+}
+
+
+.sign-up-container {
+    display: flex;
+
+    max-height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sign-up-container > h6 {
+    font-size: 2rem;
+}
+.sign-up-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.img-section {
+    height: 100%;
+}
+.img-section> img{
+    height: 100%;
+}
