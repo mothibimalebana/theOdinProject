@@ -124,7 +124,7 @@ li {
   flex: 2 1 0;
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 60%;
   flex-direction: column;
   justify-content: center;
 }
@@ -147,6 +147,13 @@ form {
   display: flex;
   flex-wrap: wrap;
   gap: 1vw;
+}
+input{
+  border-radius: 1vh;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(102, 102, 102, 35%);
+  height: 5vh;
 }
 
 .img-section {
