@@ -124,7 +124,7 @@ li {
   flex: 2 1 0;
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
   flex-direction: column;
   justify-content: center;
 }
@@ -140,12 +140,13 @@ form {
     height: 100%;
 }
 .pass-criteria > ul > li{
-font-size: 0.875rem;
-width: fit-content;
+  font-size: 0.875rem;
+  width: fit-content;
 }
 .pass-criteria > ul {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .img-section {
