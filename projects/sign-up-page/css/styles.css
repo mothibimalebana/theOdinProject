@@ -162,3 +162,15 @@ input{
 .img-section> img{
     height: 100%;
 }
+.bottom {
+  width: 60%;
+}
+button{
+  color: #fff;
+  border-radius: 5vh;
+  margin: 0;
+  padding: 3vh;
+  background-color: rgba(17, 17, 17, 0.25);
+  border: rgba(17, 17, 17, 0.25);
+
+}
