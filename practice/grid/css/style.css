@@ -2,6 +2,8 @@
     display: inline-grid;
     grid-template: 50px 50px/ 50px 50px;
     column-gap: 10px;
+    row-gap: 100px;
+    
 }
 
 .grid-container > div{
