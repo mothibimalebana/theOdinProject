@@ -13,6 +13,16 @@
     grid-row-start: 1;
     grid-row-end: 3;
 }
+#Bedroom {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+#closet {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
 #Bathroom {
     grid-row-start: 3;
     grid-row-end: 6;
