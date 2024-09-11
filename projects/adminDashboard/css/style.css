@@ -12,6 +12,7 @@
     margin: 0;
   }
   :root{
+
     height: 100vh;
   }
   /*
@@ -22,8 +23,7 @@
   body {
     font-size: 16px;
     height: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.5;
+    font-family: 'Inter';
     -webkit-font-smoothing: antialiased;
   }
   /*
@@ -68,8 +68,36 @@
   }
   .sidebar-container{
     display: grid;
-    grid-template-rows: 2rem 10rem 5rem;
-    gap: 2rem;
+    grid-template-rows: 5rem 15rem 8rem;
+    justify-content: center;
+    gap: 4rem;
+
+    background: linear-gradient(180deg, #9F69B8 0%, rgba(77, 139, 204, 0.99) 91.15%);
+  }
+  .sidebar-header{
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+  }
+  .sidebar-content, .sidebar-extras{
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(1rem));
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-weight: 700;
+  
+  }
+  .sidebar-header, .home, .profile, .messages, .history, .tasks, .communities, .settings, .support, .privacy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+  }
+  .sidebar-content div p{
+    font-weight: 700;
   }
   .main-content{
     display: grid;
