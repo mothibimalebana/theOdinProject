@@ -99,13 +99,53 @@
   .sidebar-content div p{
     font-weight: 700;
   }
+  .header{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+  
+    padding: 0rem 3.75rem;
+  }
+  .top-header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .tr, .tl{
+    display: flex;
+    gap: 1.75rem;
+  }
   .main-content{
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
     height: 100%;
+  
+    padding: 0rem 1.75rem;
+    background: #DEE6EC;
+  }
+  .main-right {
+    display: flex;
+  }
+  .main-left{
+    display: grid;
+    
   }
   .projects{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    padding: 0 1.75rem;
+  }
+  .article {
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    height: 100%;
+  }
+  .announcements {
+    background: #DEE6EC;
+  }
+  .announcement {
+    background: #FFFFFF;
   }
