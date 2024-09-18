@@ -1,7 +1,9 @@
-let fruit = prompt("Which fruit do you wanna cop?", "apple")
+function makeUser(name, age) {
+    return{
+        name,
+        age,
+    };
+}
 
-let bag = {
-    [fruit]: 5
-};
-
-alert(`${fruit}: ${bag[fruit]}`)
+let user = makeUser("John", 30);
+alert(user.name);
