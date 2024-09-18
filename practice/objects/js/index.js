@@ -1,9 +1,10 @@
-function makeUser(name, age) {
-    return{
-        name,
-        age,
-    };
-}
+let user = {
+    name: 'John',
+    age: 30,
+    isAdmin: true,
+};
 
-let user = makeUser("John", 30);
-alert(user.name);
+for (let key in user) {
+    alert(key);
+    alert(user[key]);
+}
