@@ -1,8 +1,7 @@
-let user = {
-    name: 'John',
-    age: 30,
-    'likes cars': true,
-}
+let fruit = prompt("Which fruit do you wanna cop?", "apple")
 
-let key = prompt("What do you want to know about the user?", "name");
-alert(user[key])
+let bag = {
+    [fruit]: 5
+};
+
+alert(`${fruit}: ${bag[fruit]}`)
