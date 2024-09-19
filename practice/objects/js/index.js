@@ -11,7 +11,8 @@ Hero.prototype.greet = function() {
 //Warrior
 function Warrior(name, level, weapon) {
     Object.setPrototypeOf(Warrior.prototype, Hero.prototype);
-
+    this.name = name;
+    this.level = level;
     this.weapon = weapon;
 }
 Warrior.prototype.attack = function () {
@@ -30,5 +31,5 @@ Healer.prototype.heal = function() {
 
 
 
-let hero1 = new Hero('Bjorn', 1);
-let heather = new Healer('Heather', 1, "healer's touch");
+let hero1 = new Warrior('Bjorn', 1, 'axe');
+let hero2 = new Healer('Heather', 1, 'cure');
