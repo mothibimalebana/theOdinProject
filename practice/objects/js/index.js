@@ -1,16 +1,5 @@
-function Person(name) {
+function Hero(name, level) {
     this.name = name;
-  }
-  
-  Person.prototype.sayName = function() {
-    console.log(`Hello, I'm ${this.name}!`);
-  };
-  
-  function Player(name, marker) {
-    this.name = name;
-    this.marker = marker;
-  }
-  
-  Player.prototype.getMarker = function() {
-    console.log(`My marker is '${this.marker}'`);
-  };
+    this.level = level;
+
+}
