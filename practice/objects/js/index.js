@@ -23,7 +23,9 @@ function Healer(name, level, spell){
 
     this.spell = spell;
 }
-
+Healer.prototype.heal = function() {
+    return `${this.name} casts ${this.spell}.`;
+}
 
 
 
