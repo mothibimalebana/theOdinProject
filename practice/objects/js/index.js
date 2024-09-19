@@ -14,7 +14,9 @@ function Warrior(name, level, weapon) {
 
     this.weapon = weapon;
 }
-
+Warrior.prototype.attack = function () {
+    return `${this.name} attacks with the ${this.weapon}.`;
+}
 //Healer
 function Healer(name, level, spell){
     Object.setPrototypeOf(Healer.prototype, Hero.prototype);
