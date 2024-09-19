@@ -10,14 +10,14 @@ Hero.prototype.greet = function() {
 
 //Warrior
 function Warrior(name, level, weapon) {
-    Hero.call(this, name, level)
+    Object.setPrototypeOf(Warrior.prototype, Hero.prototype);
 
     this.weapon = weapon;
 }
 
 //Healer
 function Healer(name, level, spell){
-    Hero.call(this, name, level);
+    Object.setPrototypeOf(Healer.prototype, Hero.prototype);
 
     this.spell = spell;
 }
@@ -27,4 +27,4 @@ function Healer(name, level, spell){
 
 
 let hero1 = new Hero('Bjorn', 1);
-
+let heather = new Healer('Heather', 1, "healer's touch");
