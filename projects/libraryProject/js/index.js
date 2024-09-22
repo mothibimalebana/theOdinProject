@@ -8,8 +8,15 @@ function addBookToLibrary() {
 
 }
 
-function displayBooks(libraryArry) {
-    libraryArry.forEach((element) => {
-
+function displayBooks() {
+    myLibrary.forEach((book) => {
+        console.log(book);
     });
+}
+
+function addBook(newBook) {
+    myLibrary.push(newBook);
+    return{
+        newBook
+    }
 }
