@@ -10,7 +10,6 @@
   */
   * {
     margin: 0;
-    color: #FFF;
   }
   :root{
 
@@ -22,6 +21,9 @@
     4. Improve text rendering
   */
   body {
+    color: var(--Text, #0D0842);
+
+    font-family: 'Nunito Sans 10pt';
     font-size: 16px;
     height: 100%;
     font-family: 'Inter';
@@ -62,6 +64,34 @@
     margin: 0;
   }
 
+  @font-face {
+    font-family: 'Nunito Sans 10pt';
+    src: url('NunitoSans10pt-Regular.woff2') format('woff2'),
+        url('NunitoSans10pt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans 10pt';
+    src: url('NunitoSans10pt-Light.woff2') format('woff2'),
+        url('NunitoSans10pt-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans 10pt';
+    src: url('NunitoSans10pt-Bold.woff2') format('woff2'),
+        url('NunitoSans10pt-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
   .container {
     display: flex;
   
@@ -85,4 +115,8 @@
   }
   .options {
     align-self: center;
+  }
+
+  .header {
+    display: flex;
   }
