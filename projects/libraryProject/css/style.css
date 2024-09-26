@@ -171,7 +171,34 @@
   display: flex;
   justify-content: center
  }
+ 
 
+ .collection {
+  display: grid;
+  gap: 3.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5rem 2rem;
+ }
+ .bookContainer {
+  display: flex;
+  gap: 1.5rem;
+  grid-auto-rows: repeat(auto-fit, minmax(100px, 1rem));
+
+ }
+ .bookRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+ }
+ .bookRight > button {
+    width: 12rem;
+  border-radius: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-style: none;
+  background-color: #FFCE1A;
+  color: #FFFFF8;
+ }
 
 
 
