@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Nunito Sans 7pt';
+    src: url('NunitoSans7pt-Bold.woff2') format('woff2'),
+        url('NunitoSans7pt-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans 7pt Condensed';
+    src: url('NunitoSans7ptCondensed-Light.woff2') format('woff2'),
+        url('NunitoSans7ptCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans 7pt Expanded';
+    src: url('NunitoSans7ptExpanded-Regular.woff2') format('woff2'),
+        url('NunitoSans7ptExpanded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans 7pt';
+    src: url('NunitoSans7pt-Medium.woff2') format('woff2'),
+        url('NunitoSans7pt-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
