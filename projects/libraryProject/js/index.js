@@ -1,4 +1,3 @@
-const myLibrary = ['Forget A mentor, Find a Sponsor', 'The Time Has Come', 'Pride And Protest'];
 
 function Book(title, author, pages, read,) {
     this.title = title;
@@ -11,14 +10,15 @@ const bookOne = new Book('The Time Has Come', 'Nikki Payne', 457, false);
 const bookTwo = new Book('Forget A Mentor Find A Sponsor', 'Spensor Ann', 256, false);
 const bookThree = new Book('Pride And Protest', 'Tim Bell', 870, false);
 
+const myLibrary = [bookOne, bookTwo, bookThree];
 
 function addBookToLibrary() {
 
 }
 
-function displayBooks() {
+function displayBooks(libraryArray) {
     myLibrary.forEach((book) => {
-        console.log(book);
+        console.log(book.title);
     });
 }
 
