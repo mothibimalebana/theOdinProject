@@ -12,7 +12,7 @@
     margin: 0;
   }
   :root{
-
+    height: 100vh;
   }
   /*
     Typographic tweaks!
@@ -97,8 +97,8 @@
 
   min-height: 100%;
 
-  display: grid;
-  grid-auto-rows: repeat(auto-fit, minmax(100px, 1fr));
+  display: flex;
+  flex-direction: column;
  }
 
  .navbar {
@@ -189,6 +189,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
  }
  .bookRight > button {
@@ -202,6 +203,12 @@
 
 
 
+ .pop-up-form {
+  display: none;
+ }
+  footer{
+    margin-top: auto;
+  }
  .footerContainer{
   display: flex;
   justify-content: center;

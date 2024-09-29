@@ -24,11 +24,32 @@
                 </div>
             </div>
             <div class="navbar-right">
-                <button>Add To Collection</button>
+                <button onclick="addBook()" class="addButton">Add To Collection</button>
             </div>
         </div>
     
         <div class="collection">
+        </div>
+
+        <div class="pop-up-form" id="myForm">
+            <form action="#">
+                <h1>Add A New Book</h1>
+
+                <label for="title">Title</label>
+                <input type="text" placeholder="shakespeare@gmail.com" name="title" required>
+            
+                <label for="author">Password</label>
+                <input type="password" placeholder="mySecretPassword@123" name="author" required>
+            
+                <label for="pages">Pages</label>
+                <input type="number" name="pages" id="numberOfPages" required>
+
+                <label for="read">Read</label>
+                <input type="checkbox" name="read" id="">
+
+                <button type="submit">submit</button>
+
+            </form>
         </div>
         <footer>
             <div class="footerContainer">

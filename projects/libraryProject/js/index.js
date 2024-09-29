@@ -2,6 +2,7 @@ const collection = document.querySelector('.collection');
 const bookContainer = document.querySelectorAll('.bookContainer');
 const bookRight = document.querySelectorAll('.bookRight');
 
+
 let p = document.createElement("p");
 p.setAttribute("class", "pElem");
 
@@ -29,20 +30,19 @@ function displayBooks(libraryArray) {
         let bookClass = document.createElement("div");
         bookClass.setAttribute("class", "bookRight");
 
-        let p = document.createElement("p");
-        p.textContent = `${book.author}`;
-        bookClass.append(p);
-
         let h5 = document.createElement("h5");
         h5.textContent = `${book.title}`;
         bookClass.append(h5);
+
+        let p = document.createElement("p");
+        p.textContent = `${book.author}`;
+        bookClass.append(p);
     
         let button = document.createElement("button");
         button.textContent =`${book.read}`;
         bookClass.append(button);
 
-        collection.append(bookClass)
-        
+        collection.append(bookClass)        
     });
 }
 
@@ -52,4 +52,14 @@ function addBook(newBook) {
     return{
         newBook
     }
+}
+
+function addBook(library){
+    displayForm();
+}
+function displayForm(){
+    document.getElementById('myForm').style.display = 'block';
+}
+function closeForm(){
+    document.getElementById('myForm').style.display = 'none';
 }
