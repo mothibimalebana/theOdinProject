@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="navbar-right">
-                <button onclick="addBook()" class="addButton">Add To Collection</button>
+                <button  class="addButton">Add To Collection</button>
             </div>
         </div>
     
@@ -32,27 +32,27 @@
         </div>
 
         <div class="pop-up-form" id="myForm">
-            <form action="#">
-                <div class="formHeader">
-                    <h1>Add A New Book</h1>
-                    <img onclick="closeForm()" src="./img/211652_close_icon.png" alt="">
-                </div>
-
-                <label for="title">Title</label>
-                <input type="text" placeholder="The Prince" name="title" required>
-            
-                <label for="author">Author</label>
-                <input type="password" placeholder="Leonardo De Caprio" name="author" required>
-            
-                <label for="pages">Pages</label>
-                <input type="number" name="pages" id="numberOfPages" required>
-
-                <label for="read">Read</label>
-                <input type="checkbox" name="read" id="">
-
-                <button type="submit">submit</button>
-
-            </form>
+            <dialog>
+                <form method="dialog" action="#">
+                    <div class="formHeader">
+                        <h1>Add A New Book</h1>
+                        <img src="./img/211652_close_icon.png" alt="">
+                    </div>
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="The Prince" name="title" required>
+                
+                    <label for="author">Author</label>
+                    <input type="text" placeholder="Leonardo De Caprio" name="author" required>
+                
+                    <label for="pages">Pages</label>
+                    <input type="number" name="pages" id="numberOfPages" required>
+                    <div class="read">
+                        <label for="read">Read</label>
+                        <input type="checkbox" name="read" id="">
+                    </div>
+                    <button type="submit">submit</button>
+                </form>
+            </dialog>
         </div>
         <footer>
             <div class="footerContainer">

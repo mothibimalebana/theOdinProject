@@ -200,11 +200,25 @@
   background-color: #FFCE1A;
   color: #FFFFF8;
  }
+ .read {
+  display: flex;
+  justify-content: space-between;
+
+ }
 
 
+ dialog{
+  margin: auto;
+ }
+ ::backdrop{
+  background: #FFCE1A;
+  opacity: .45;
 
+ }
  .pop-up-form {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
  }
  .formHeader {
   display: flex;
@@ -212,6 +226,7 @@
  }
  form {
   display: flex;
+  gap: 0.75rem;
   flex-direction: column;
  }
   footer{

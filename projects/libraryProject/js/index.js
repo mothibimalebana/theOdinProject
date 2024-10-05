@@ -1,4 +1,7 @@
 const collection = document.querySelector('.collection');
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector(".navbar-right > button")
+const closeButton = document.querySelector(".formHeader > img")
 const bookContainer = document.querySelectorAll('.bookContainer');
 const bookRight = document.querySelectorAll('.bookRight');
 
@@ -58,8 +61,15 @@ function addBook(library){
     displayForm();
 }
 function displayForm(){
-    document.getElementById('myForm').style.display = 'block';
+    dialog.showModal();
 }
 function closeForm(){
-    document.getElementById('myForm').style.display = 'none';
+    dialog.close();
 }
+
+showButton.addEventListener("click", () => {
+    dialog.showModal();
+});
+closeButton.addEventListener("click", () => {
+    dialog.close();
+})
