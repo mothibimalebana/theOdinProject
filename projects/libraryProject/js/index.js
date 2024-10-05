@@ -8,6 +8,7 @@ const bookRight = document.querySelectorAll('.bookRight');
 
 //form
 const bookTitle = document.getElementById("bookTitle");
+const bookAuthor = document.getElementById("bookAuthor");
 
 
 let p = document.createElement("p");
