@@ -6,6 +6,10 @@ const bookContainer = document.querySelectorAll('.bookContainer');
 const bookRight = document.querySelectorAll('.bookRight');
 
 
+//form
+const bookTitle = document.getElementById("bookTitle");
+
+
 let p = document.createElement("p");
 p.setAttribute("class", "pElem");
 
