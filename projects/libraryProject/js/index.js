@@ -4,15 +4,14 @@ const showButton = document.querySelector(".navbar-right > button")
 const closeButton = document.querySelector(".formHeader > img")
 const bookContainer = document.querySelectorAll('.bookContainer');
 const bookRight = document.querySelectorAll('.bookRight');
-
+const submitButton = document.getElementById("bookRead");
+const form = document.querySelector("form");
 
 //form
 const bookTitle = document.getElementById("bookTitle");
 const bookAuthor = document.getElementById("bookAuthor");
-
-
-let p = document.createElement("p");
-p.setAttribute("class", "pElem");
+const bookPages = document.getElementById("bookPages");
+const bookRead = document.getElementById("bookRead");
 
 
 function Book(title, author, pages, read,) {
@@ -26,12 +25,13 @@ const bookOne = new Book('The Time Has Come', 'Nikki Payne', 457, false);
 const bookTwo = new Book('Forget A Mentor Find A Sponsor', 'Spensor Ann', 256, false);
 const bookThree = new Book('Pride And Protest', 'Tim Bell', 870, false);
 
-const myLibrary = [bookOne, bookTwo, bookThree];
+const myLibrary = [];
 
-function addBookToLibrary() {
-
+function cleanUp(myLibrary){
+    while(collection.firstChild){
+        collection.removeChild(collection.firstChild);
+    }
 }
-
 function displayBooks(libraryArray) {
     myLibrary.forEach((book) => {
 
@@ -45,7 +45,13 @@ function displayBooks(libraryArray) {
         let p = document.createElement("p");
         p.textContent = `${book.author}`;
         bookClass.append(p);
+
+        let pages = document.createElement("p");
+        pages.textContent = `${book.pages}`;
+        bookClass.append(pages)
     
+        let buttonClass = document.createElement("button");
+        buttonClass.setAttribute("class", "btnClass");
         let button = document.createElement("button");
         button.textContent =`${book.read}`;
         bookClass.append(button);
@@ -54,17 +60,6 @@ function displayBooks(libraryArray) {
     });
 }
 
-displayBooks(myLibrary);
-function addBook(newBook) {
-    myLibrary.push(newBook);
-    return{
-        newBook
-    }
-}
-
-function addBook(library){
-    displayForm();
-}
 function displayForm(){
     dialog.showModal();
 }
@@ -77,4 +72,15 @@ showButton.addEventListener("click", () => {
 });
 closeButton.addEventListener("click", () => {
     dialog.close();
+});
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
 })
+
+submitButton.addEventListener("click", () => {
+    let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value, false);
+    myLibrary.push(newBook);
+    cleanUp(myLibrary);
+    displayBooks(myLibrary);
+});
