@@ -6,10 +6,17 @@ const gameBoard = (function () {
     for(let i = 0; i < rows; i++){
         board[i] = [];
         for(let j = 0; j < columns; j++){
-            board[i].push(cell)
+            board[i].push(cell())
         }
     }
 
+    const getBoard = () => board;
+
+    const printBoard = () => {
+        
+    }
+
+    return {getBoard, }
 
 })();
 
@@ -26,7 +33,7 @@ const gameController = (function (
     playerOne = 'PlayerOne',
     playerTwo = 'PlayerTwo'
 ){
-    players[
+    const players = [
         {
             name: playerOne,
             token: 1
@@ -36,4 +43,18 @@ const gameController = (function (
             token: 2
         }
     ]
+    let currentPlayer = players[0];
+
+    const switchPlayer = () => {
+        if(currentPlayer === players[0]) {
+            currentPlayer = players[1];
+        }
+        else if(currentPlayer === players[1]) {
+            currentPlayer === players[0];
+        }
+    }
+
+    const getCurrentPlayer = () => currentPlayer;
+
+    return {players, switchPlayer, getCurrentPlayer}
 })();
