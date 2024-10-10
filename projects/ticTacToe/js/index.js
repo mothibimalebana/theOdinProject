@@ -11,12 +11,15 @@ const gameBoard = (function () {
     }
 
     const getBoard = () => board;
+    const printToken = (row ,column, player) => {
 
-    const printBoard = () => {
-        
     }
 
-    return {getBoard, }
+    const printBoard = board.map((row) => row.map((cell) => cell.getValue()));
+
+
+
+    return {getBoard, printBoard}
 
 })();
 
