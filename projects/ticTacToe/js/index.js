@@ -13,7 +13,7 @@ const gameBoard = (function () {
     const getBoard = () => board;
 
     const printToken = (row,column, player) => {
-        if(availableCells()[row][column] === board[row][column]){
+        if(availableCells()[row].includes(board[row][column])){
             board[row][column].addToken(player);
         }
 
@@ -70,8 +70,7 @@ const gameController = (function (){
     const playRound = (row, column,) => {
         gameBoard.printToken(row, column, currentPlayer.token);
         switchPlayer();
-    
-        return board();
+        console.log(board());
     }
 
     return {players, switchPlayer, getCurrentPlayer, playRound}
