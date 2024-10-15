@@ -3,6 +3,7 @@ const gameBoard = (function () {
     const column = 3;
     let board = [];
 
+    //3x3 Grid
     for(let i = 0; i < row; i++){
         board[i] = [];
         for(let j = 0; j < column; j++){
@@ -12,7 +13,10 @@ const gameBoard = (function () {
 
     const getBoard = () => board;
 
-    return {getBoard}
+    const printBoard = () => board.map((row) => row.map((cell) => cell.getValue()));
+
+
+    return {getBoard, printBoard}
 })();
 
 function cell(){
