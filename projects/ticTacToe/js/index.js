@@ -14,9 +14,10 @@ const gameBoard = (function () {
     const getBoard = () => board;
 
     const printBoard = () => board.map((row) => row.map((cell) => cell.getValue()));
+    const placeToken = (row, column, playerValue) => board[row][column].changeValue(playerValue)    
 
 
-    return {getBoard, printBoard}
+    return {getBoard, printBoard, placeToken}
 })();
 
 function cell(){
