@@ -15,10 +15,16 @@ const gameBoard = (function () {
     const getBoard = () => board;
 
     const printBoard = () => board.map((row) => row.map((cell) => cell.getValue()));
-    const placeToken = (row, column, playerValue) => board[row][column].changeValue(playerValue)    
+    const placeToken = (row, column, playerValue) => {
+        if(availableCells().includes(board[row][column])){
+            board[row][column].changeValue(playerValue);
+        }
+    
+        else return;
+    }    
 
 
-    return {getBoard, printBoard, placeToken, availableCells}
+    return {getBoard, printBoard, placeToken}
 })();
 
 function cell(){
@@ -51,7 +57,13 @@ const gameControlller = (function (){
         }
     }
 
-    const getCurrentPlayer = () => currentPlayer
+    const getCurrentPlayer = () => currentPlayer;
+
+    const playRound = (row, column) => {
+        let playerToken = currentPlayer.token;
+        gameBoard.placeToken(row, column, playerToken); 
+    }
+
 
     return{players, switchPlayer, getCurrentPlayer}
 })();
