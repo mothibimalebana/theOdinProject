@@ -43,8 +43,18 @@ const gameControlller = (function (){
     let currentPlayer = players[0];
 
     const switchPlayer = () => {
-        if(currentPlayer === 1)
+        if(currentPlayer === players[0]){
+            currentPlayer = players[1];
+        }
+        else if(currentPlayer === players[1]){
+            currentPlayer = players[0];
+        }
+        else {
+            console.log('something went wrong');
+        }
     }
 
-    return{players}
+    const getCurrentPlayer = () => currentPlayer
+
+    return{players, switchPlayer, getCurrentPlayer}
 })();
