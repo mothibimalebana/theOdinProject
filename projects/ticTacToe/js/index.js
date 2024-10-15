@@ -11,13 +11,14 @@ const gameBoard = (function () {
         }
     }
 
+    const availableCells = () => board.map((row) => row.filter((cell) => cell.getValue() === 0));
     const getBoard = () => board;
 
     const printBoard = () => board.map((row) => row.map((cell) => cell.getValue()));
     const placeToken = (row, column, playerValue) => board[row][column].changeValue(playerValue)    
 
 
-    return {getBoard, printBoard, placeToken}
+    return {getBoard, printBoard, placeToken, availableCells}
 })();
 
 function cell(){
