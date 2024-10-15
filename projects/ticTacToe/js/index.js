@@ -16,7 +16,7 @@ const gameBoard = (function () {
 
     const printBoard = () => board.map((row) => row.map((cell) => cell.getValue()));
     const placeToken = (row, column, playerValue) => {
-        if(availableCells().includes(board[row][column])){
+        if(availableCells()[row].includes(board[row][column])){
             board[row][column].changeValue(playerValue);
         }
     
@@ -61,9 +61,10 @@ const gameControlller = (function (){
 
     const playRound = (row, column) => {
         let playerToken = currentPlayer.token;
-        gameBoard.placeToken(row, column, playerToken); 
+        console.log(`dropping player${currentPlayer.token}'s token on row:${row} column:${column}`)
+        gameBoard.placeToken(row, column, playerToken);
     }
 
 
-    return{players, switchPlayer, getCurrentPlayer}
+    return{players, switchPlayer, getCurrentPlayer, playRound}
 })();
