@@ -72,6 +72,24 @@ const gameController = (function (){
         switchPlayer();
         console.log(board());
     }
+    function playerOccupiedCells(){
+        board().map((row) => row.filter((cell) => cell.getValue() === currentPlayer.token))
+    }
+    const winConditions = [
+        //Row
+        [[0,0], [0,1], [0,2]],
+        [[1,0], [1,1], [1,2]],
+        [[2,0], [2,1], [2,2]],
 
-    return {players, switchPlayer, getCurrentPlayer, playRound}
+        //Diagonal
+        [[0,0], [1,1], [2,2]],
+        [[0,2], [1,1], [2,0]],
+    
+        //Columns
+        [[0,0], [1,0], [2,0]],
+        [[0,1], [1,1], [2,1]],
+        [[0,2], [1,2], [2,2]],
+    ]
+
+    return {players, switchPlayer, getCurrentPlayer, playRound, winConditions, playerOccupiedCells}
 })();
