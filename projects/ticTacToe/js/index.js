@@ -29,3 +29,22 @@ function cell(){
 
     return{getValue, changeValue}
 }
+
+const gameControlller = (function (){
+    players = [
+        {
+            token: 1,
+        },
+        {
+            token: 2,
+        },
+    ];
+
+    let currentPlayer = players[0];
+
+    const switchPlayer = () => {
+        if(currentPlayer === 1)
+    }
+
+    return{players}
+})();
