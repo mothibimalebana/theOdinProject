@@ -18,13 +18,16 @@ const gameBoard = (function () {
     const placeToken = (row, column, playerValue) => {
         if(availableCells()[row].includes(board[row][column])){
             board[row][column].changeValue(playerValue);
+            return true
         }
     
-        else return;
+        else {
+            return false
+        }
     }    
 
 
-    return {getBoard, printBoard, placeToken}
+    return {getBoard, printBoard, placeToken,}
 })();
 
 function cell(){
@@ -60,9 +63,14 @@ const gameControlller = (function (){
     const getCurrentPlayer = () => currentPlayer;
 
     const playRound = (row, column) => {
-        let playerToken = currentPlayer.token;
-        console.log(`dropping player${currentPlayer.token}'s token on row:${row} column:${column}`)
-        gameBoard.placeToken(row, column, playerToken);
+        let playerToken = getCurrentPlayer().token;
+        let isValidMove = gameBoard.placeToken(row,column,playerToken);
+        if(isValidMove){
+            switchPlayer();
+        }
+        else{  
+        }
+        
     }
 
 
