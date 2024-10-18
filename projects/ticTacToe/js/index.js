@@ -39,12 +39,16 @@ function cell(){
     return{getValue, changeValue}
 }
 
-const gameControlller = (function (){
+const gameControlller = (function (
+    playerOne = "Player One", playerTwo = "Player Two"
+){
     players = [
         {
+            name: playerOne,
             token: 1,
         },
         {
+            name: playerTwo,
             token: 2,
         },
     ];
@@ -107,6 +111,6 @@ const gameControlller = (function (){
 })();
 
 const displayController = () => {
-    const game = gameBoard
+    const game = gameBoard;
 
 }
