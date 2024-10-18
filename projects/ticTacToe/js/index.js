@@ -62,13 +62,31 @@ const gameControlller = (function (){
 
     const getCurrentPlayer = () => currentPlayer;
 
-    const playRound = (row, column) => {
-        let playerToken = getCurrentPlayer().token;
-        let isValidMove = gameBoard.placeToken(row,column,playerToken);
-        if(isValidMove){
-            switchPlayer();
+    const checkWin = (playerToken) => {
+        for(let i = 0; i < 3; i++){
+            //row win
+            if(gameBoard.printBoard()[i][0] === playerToken && gameBoard.printBoard()[i][1] === playerToken  && gameBoard.printBoard()[i][2] === playerToken ){
+                return true
+            }
+            
         }
-        else{  
+        
+    }
+
+    const playRound = (row, column) => {
+        let playerToken = currentPlayer.token;
+        let isValidMove = gameBoard.placeToken(row,column,playerToken);
+        let checkWinner = checkWin(playerToken);
+        if(isValidMove){
+            if(checkWinner){
+                console.log(`${currentPlayer.token} wins this round`);
+            }
+            else{
+                switchPlayer();
+            }
+        }
+        else{
+
         }
         
     }
