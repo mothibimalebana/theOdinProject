@@ -103,5 +103,10 @@ const gameControlller = (function (){
     }
 
 
-    return{players, switchPlayer, getCurrentPlayer, playRound}
+    return{getCurrentPlayer, playRound}
 })();
+
+const displayController = () => {
+    const game = gameBoard
+
+}
