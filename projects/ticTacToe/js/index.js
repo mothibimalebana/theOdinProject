@@ -65,12 +65,23 @@ const gameControlller = (function (){
     const checkWin = (playerToken) => {
         for(let i = 0; i < 3; i++){
             //row win
-            if(gameBoard.printBoard()[i][0] === playerToken && gameBoard.printBoard()[i][1] === playerToken  && gameBoard.printBoard()[i][2] === playerToken ){
+            if(gameBoard.printBoard()[i][0] === playerToken && gameBoard.printBoard()[i][1] === playerToken  && gameBoard.printBoard()[i][2] === playerToken){
                 return true
             }
-            
+            else if(gameBoard.printBoard()[0][i] === playerToken && gameBoard.printBoard()[1][i] === playerToken && gameBoard.printBoard()[2][i] === playerToken){
+                return true
+            }
         }
-        
+
+        if(gameBoard.printBoard()[0][0] === playerToken && gameBoard.printBoard()[1][1] === playerToken && gameBoard.printBoard()[2][2] === playerToken){
+            return true
+        }
+        else if(gameBoard.printBoard()[0][2] === playerToken && gameBoard.printBoard()[1][1] === playerToken && gameBoard.printBoard()[2][0] === playerToken){
+            return true
+        }
+        else{
+            return false
+        }  
     }
 
     const playRound = (row, column) => {
