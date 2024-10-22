@@ -40,7 +40,8 @@ function cell(){
 }
 
 const gameControlller = (function (
-    playerOne = "Player One", playerTwo = "Player Two"
+    playerOne = "Player One",
+    playerTwo = "Player Two"
 ){
     players = [
         {
@@ -94,7 +95,7 @@ const gameControlller = (function (
         let checkWinner = checkWin(playerToken);
         if(isValidMove){
             if(checkWinner){
-                console.log(`${currentPlayer.token} wins this round`);
+                alert(`${currentPlayer.name} wins`)
             }
             else{
                 switchPlayer();
@@ -110,7 +111,41 @@ const gameControlller = (function (
     return{getCurrentPlayer, playRound}
 })();
 
-const displayController = () => {
-    const game = gameBoard;
+const displayController = (function (){
+    const game = gameControlller;
+    const activePlayer = game.getCurrentPlayer;
+    const board = gameBoard.getBoard();
 
-}
+    //DOM
+    const boardDiv = document.querySelector('.board');
+    const playerTurn = document.querySelector('.players');
+
+
+    const updateScreen = () => {
+        boardDiv.textContent = '';
+        board.forEach((row, rowIndex) => row.forEach((cell, columnIndex) => {
+            const gridCell = document.createElement("button");
+            gridCell.classList.add("gridCell");
+            
+            gridCell.dataset.row = rowIndex;
+            gridCell.dataset.column = columnIndex;
+        
+            gridCell.textContent = cell.getValue();
+            boardDiv.appendChild(gridCell);
+        }))
+
+    }
+
+    const clickHandlerBoard = (e) => {
+        const selectedRow = e.target.dataset.row;
+        const selectedColumn = e.target.dataset.column;
+    
+        if(!selectedRow && !selectedColumn) return;
+    
+        game.playRound(selectedRow, selectedColumn);
+        updateScreen();
+    }
+    boardDiv.addEventListener("click", clickHandlerBoard);
+
+    updateScreen();
+})();
