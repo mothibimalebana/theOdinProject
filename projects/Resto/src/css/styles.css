@@ -1,0 +1,84 @@
+/** Font Face **/
+@font-face {
+    font-family: 'rancho';
+    src: url('../fonts/rancho-regular-webfont.woff2') format('woff2'),
+         url('../fonts/rancho-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'franklinthin';
+    src: url('../fonts/librefranklin-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/librefranklin-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/** Css Reset **/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  :root{
+
+    height: 100vh;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    font-size: 16px;
+    height: 100%;
+    font-family: 'Inter';
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  ul{
+    margin: 0;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-left{
+    display: flex;
+  }
