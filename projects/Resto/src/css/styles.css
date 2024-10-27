@@ -1,6 +1,6 @@
 /** Font Face **/
 @font-face {
-    font-family: 'rancho';
+    font-family: 'Rancho';
     src: url('../fonts/rancho-regular-webfont.woff2') format('woff2'),
          url('../fonts/rancho-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'franklinthin';
+    font-family: 'Libre Franklin';
     src: url('../fonts/librefranklin-variablefont_wght-webfont.woff2') format('woff2'),
          url('../fonts/librefranklin-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
@@ -76,9 +76,38 @@
   }
 
   header{
+    /**Layout**/
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
+    max-width: 90rem;
+    max-height: 12rem;
   }
-  .header-left{
+  .header-left > h3{
+    /**Typography**/
+    color: #000;
+    font-size: 6rem;
+    font-style: normal;
+    font-family: 'Rancho';
+    font-weight: 400;
+  }
+  .header-right{
+    /**Layout**/
     display: flex;
+    align-items: center;
+    gap: 7.62rem;
+  
+    /**Typography**/
+    color: #000;
+    font-family: "Libre Franklin";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
+  .header-right > nav >button {
+    background: #FFF;
+    border: none;
+    
+  }
+
