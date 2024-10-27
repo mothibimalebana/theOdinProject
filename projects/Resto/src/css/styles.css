@@ -110,4 +110,65 @@
     border: none;
     
   }
+  #content {
+    /**Layout**/
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 0.35fr));
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 90rem;
+    align-items: center;
+    justify-items: center;
+  }
+  .content-left{
+    display: flex;
+    flex-direction: column;
+    gap: 7.88rem;
+    align-items: center;
+  }
+  .content-left > .title{
+    /**Typography**/
+    font-size: 3rem;
+    font-family: "Libre Franklin";
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+  
+    /**Layout**/
+    max-width: 27.6875rem;
+    gap: 7.88rem
+  }
+  .content-left > .button{
+    /**Typography**/
+    font-size: 1.25rem;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 400;
+    
+    /**Layout**/
+    max-width: 27.6875rem;
+  }
+  .button {
+    /**Layout**/
+    display: flex;
+    flex-direction: row;
+    gap: 2.75rem;
+  }
+  .button > button {
+    /**Layout**/
+    width: 10.3125rem;
+    height: 3.125rem;
 
+    /**Style**/
+    border-radius: 0.625rem;
+    border: none;
+    background-color: #fff;
+  }
+  #buttonLeft {
+    /**Style**/
+    color: #FFF;
+    background: #E76F51;
+    border: none;
+    border-radius: 0.625rem;
+    box-shadow: 5px 5px 15px 0px #F4A261;
+  }
