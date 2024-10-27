@@ -26,7 +26,7 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-      watchFiles: ["./src"],
+      watchFiles: ["./src/template.html"],
       static: './dist',
     },
 }
