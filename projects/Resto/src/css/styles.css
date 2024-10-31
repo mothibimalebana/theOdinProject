@@ -45,6 +45,8 @@
     height: 100%;
     font-family: 'Inter';
     -webkit-font-smoothing: antialiased;
+    margin: 0 3.44rem;
+    padding: 1.44rem 0;
   }
   /*
     5. Improve media defaults
@@ -113,7 +115,7 @@
   #content {
     /**Layout**/
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 0.35fr));
+    grid-template-columns: 2fr 1fr;
     margin: 0 auto;
     justify-content: space-between;
     max-width: 90rem;
@@ -171,4 +173,8 @@
     border: none;
     border-radius: 0.625rem;
     box-shadow: 5px 5px 15px 0px #F4A261;
+  }
+
+  .content-right > img{
+    max-width: 100%;
   }
