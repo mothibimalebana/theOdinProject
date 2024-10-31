@@ -8,6 +8,9 @@ const homePage = (function (){
     const contentRight = document.createElement("div");
     contentRight.classList.add("content-right");
 
+    //contentLeft
+    const title = document.createElement("div");
+    title.classList.add("title");
     
 
 })();
