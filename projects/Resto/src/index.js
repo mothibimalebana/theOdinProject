@@ -1,8 +1,14 @@
 import './css/styles.css';
 
-const mainPage = (function () {
-    const content = document.getElementById("content");
-    const getContent = () => content;
+const homePage = (function (){
+    const contentDiv = document.getElementById("content");
 
-    return{getContent}
+    const contentLeft = document.createElement("div");
+    contentLeft.classList.add("content-left");
+    const contentRight = document.createElement("div");
+    contentRight.classList.add("content-right");
+
+    
+
 })();
+
