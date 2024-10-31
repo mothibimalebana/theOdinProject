@@ -2,6 +2,8 @@ import './css/styles.css';
 
 const homePage = (function (){
     const contentDiv = document.getElementById("content");
+    contentDiv.appendChild(contentLeft);
+    contentDiv.appendChild(contentRight);
 
     const contentLeft = document.createElement("div");
     contentLeft.classList.add("content-left");
@@ -11,7 +13,7 @@ const homePage = (function (){
     //contentLeft
     const title = document.createElement("div");
     title.classList.add("title");
-    
+
 
 })();
 
