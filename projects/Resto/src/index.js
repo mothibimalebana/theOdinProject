@@ -1,5 +1,6 @@
 import './css/styles.css';
-import { homePage } from './homePage';
+import { homePage } from './js/homePage';
 
-
-homePage();
+const pageController = (function(){
+    homePage()
+})()
