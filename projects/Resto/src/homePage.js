@@ -1,3 +1,5 @@
+import koreanDish from './img/korean-dish.png';
+
 const homePage = function (){
     const contentDiv = document.getElementById("content");
 
@@ -15,7 +17,7 @@ const homePage = function (){
     //contentLeft:title
     const title = document.createElement("div");
     title.classList.add("title");
-    const titleH4 = document.createElement("h4");
+    const titleH4 = document.createElement("h4"); //inside the titleDiv, there is an H4 element
     titleH4.textContent = "Home made healthy, "
     const titleSpan = document.createElement("span");
     titleSpan.textContent = 'vegan food';
@@ -37,8 +39,10 @@ const homePage = function (){
     contentLeft.appendChild(buttonDiv);
 
     //contentRight
-    const imgRight = document.createElement("img");
-    imgRight.src = "./img/korean-dish.png";
+    const imgDiv = document.createElement("img");
+    const imgRight = new Image();
+    imgRight.src = koreanDish;
+    imgDiv.appendChild(imgRight);
     contentRight.appendChild(imgRight);
 }
 
