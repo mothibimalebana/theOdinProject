@@ -1,4 +1,4 @@
-import koreanDish from './img/korean-dish.png';
+import koreanDish from '../img/korean-dish.png';
 
 const homePage = function (){
     const contentDiv = document.getElementById("content");
