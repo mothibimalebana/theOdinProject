@@ -1,5 +1,8 @@
-import { homePage } from './js/homePage';
+// import { homePage } from './js/homePage';
+
 
 // const pageController = (function(){
 //     homePage()
 // })()
+
+import './css/menuPage.css';

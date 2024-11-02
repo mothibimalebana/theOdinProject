@@ -1,5 +1,5 @@
 import koreanDish from '../img/korean-dish.png';
-import '../css/styles.css'
+import '../css/styles.css';
 
 const homePage = function (){
     const contentDiv = document.getElementById("content");
