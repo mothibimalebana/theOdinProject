@@ -128,12 +128,18 @@
   .grid-container:nth-child(2n){
     display: grid;
     grid-template-columns: 1fr 2fr;
+    justify-items: center;
   }
   .grid-container:nth-child(2n+1){
     display: grid;
     grid-template-columns: 2fr 1fr;
+    justify-items: center;
   }
   .info{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 60%;
+    gap: 1.44rem;
   }
