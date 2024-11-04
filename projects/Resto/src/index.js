@@ -1,8 +1,10 @@
-import './css/menuPage.css';
 import { menuPage } from './js/menuPage';
-// import { homePage } from './js/homePage';
+import { homePage } from './js/homePage';
 
 
 const pageController = (function(){
-    menuPage()
+const homeButton = document.querySelector(".homeButton");
+const menuButton = document.querySelector(".menuButton");
+
+
 })()

@@ -6,6 +6,7 @@ export const menuPage = function(){
     //div:title
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("title");
+
         //header:
         const titleHeader = document.createElement("div");
         titleHeader.classList.add("header");
@@ -16,6 +17,7 @@ export const menuPage = function(){
         titleSubHeader.classList.add("subheader");
         titleSubHeader.textContent = 'From The House';
         titleDiv.appendChild(titleSubHeader);
-    contentDiv.appendChild(titleDiv);
+
+    contentDiv.appendChild(titleDiv);       //append titleDiv to content
 
 }
